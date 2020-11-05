@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <div class="background-container">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="" />
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+    </div>
+    <div class="password_container">
+        <h1>Password Generator</h1>
+        <div id="DisplayResults" class="DisplayPW">[Display Here]</div>
+        <form class="form_container">
+            <label>Password Length</label>
+            <div class="password_length_container">
+                <input id="passln" type="range" min="8" max="16" value="8" />
+                <input id="passNum" type="number" size="2" min="8" max="16" value="8" />
+            </div>
+            <label>Includes Uppercase</label>
+            <input class="checkbox" id="upper_box" type="checkbox" checked />
+
+            <label>Includes Numbers</label>
+            <input class="checkbox" id="num_box" type="checkbox" checked />
+
+            <label>Includes Symbols</label>
+            <input class="checkbox" id="sym_box" type="checkbox" checked />
+        </form>
+        <button id="btn1">Generate Password</button>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
