@@ -18,43 +18,47 @@ const ADD_SYM = ConvertCharCode(33, 37);
 
 //Display generated password on website
 GeneratePW.addEventListener("click", () => {
-    const charlength = passLength.value;
-    const UpperOne = includeUpper.checked;
-    const NumberOne = includeNumber.checked;
-    const SymbolOne = includeSymbol.checked;
-    const Mypassword = GeneratePassword(charlength, UpperOne, NumberOne, SymbolOne);
-    DisplayText.innerHTML = Mypassword
-    passLength.innerHTML = "Checked"
+  const charlength = passLength.value;
+  const UpperOne = includeUpper.checked;
+  const NumberOne = includeNumber.checked;
+  const SymbolOne = includeSymbol.checked;
+  const Mypassword = GeneratePassword(
+    charlength,
+    UpperOne,
+    NumberOne,
+    SymbolOne
+  );
+  DisplayText.innerHTML = Mypassword;
+  passLength.innerHTML = "Checked";
 });
 
 //Function that generate the password
 function GeneratePassword(charlength, UpperOne, NumberOne, SymbolOne) {
-    let CharCodeValue = LOWER_CASE;
-    const password = [];
-    if (NumberOne) CharCodeValue = CharCodeValue.concat(ADD_NUM);
-    if (SymbolOne) CharCodeValue = CharCodeValue.concat(ADD_SYM);
-    if (UpperOne) CharCodeValue = CharCodeValue.concat(UPPER_CASE);
+  let CharCodeValue = LOWER_CASE;
+  const password = [];
+  if (NumberOne) CharCodeValue = CharCodeValue.concat(ADD_NUM);
+  if (SymbolOne) CharCodeValue = CharCodeValue.concat(ADD_SYM);
+  if (UpperOne) CharCodeValue = CharCodeValue.concat(UPPER_CASE);
 
-    for (let i = 0; i < charlength; i++) {
-        const generateCode =
-            CharCodeValue[Math.floor(Math.random() * CharCodeValue.length)];
-        password.push(String.fromCharCode(generateCode));
-    }
-    return password.join("");
+  for (let i = 0; i < charlength; i++) {
+    const generateCode =
+      CharCodeValue[Math.floor(Math.random() * CharCodeValue.length)];
+    password.push(String.fromCharCode(generateCode));
+  }
+  return password.join("");
 }
 
 //
 function ConvertCharCode(low, high) {
-    const ArrayList = [];
-    for (let x = low; x <= high; x++) {
-        ArrayList.push(x);
-    }
-    return ArrayList;
+  const ArrayList = [];
+  for (let x = low; x <= high; x++) {
+    ArrayList.push(x);
+  }
+  return ArrayList;
 }
 
 function ValueChange(e) {
-    const input = e.target.value;
-    passNumber.value = input;
-    passLength.value = input;
-
+  const input = e.target.value;
+  passNumber.value = input;
+  passLength.value = input;
 }
