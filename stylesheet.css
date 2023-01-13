@@ -50,6 +50,7 @@ input {
   justify-content: center;
   align-items: center;
   font-size: 24px;
+  border-radius: 0.5rem;
 }
 
 .password_length_container {
@@ -68,13 +69,17 @@ input {
 #btn1 {
   background: white;
   color: black;
-  margin: 30px;
-  font-size: 18px;
+  margin: 10px;
+  font-size: 16px;
   padding: 10px;
   outline: none;
   border: 1px solid white;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   cursor: pointer;
+  font-weight: bold;
+}
+#passIn {
+  size: 14px;
 }
 
 #btn1:hover {
@@ -143,7 +148,7 @@ input {
   width: 10000px;
   height: 100%;
   background: transparent
-    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png")
+    url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png')
     repeat;
   background-size: 1000px 1000px;
   position: absolute;
@@ -162,7 +167,7 @@ input {
   width: 10000px;
   height: 100%;
   background: transparent
-    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png")
+    url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png')
     repeat;
   background-size: 1000px 1000px;
   position: absolute;
